@@ -1,0 +1,24 @@
+#div-conteiner-detail{
+    margin-top: 80px;
+    margin-left: 40px;
+}
+
+#container-detail{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding: 10px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    list-style: none;
+    gap: 40px;
+}
+
+#container-info-product{
+    display: flex;
+    align-content: center;
+    flex-direction: row;
+    gap: 46px;
+}
