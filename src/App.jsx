@@ -4,7 +4,7 @@ import Sidebar from './components/Sidebar'
 import ContentWrapper from './components/ContentWrapper'
 import ProductDetail from './components/ProductDetail'
 import ContentRowMovies from './components/ContentRowMovies'
-import LastMovieInDb from './components/LastMovieInDb'
+import LastProductInDb from './components/LastProductInDb'
 import SearchMovies from './components/SearchMovies'
 
 import Products from './components/Products'
@@ -23,11 +23,11 @@ function App() {
 			<Routes>
 				<Route path="/" element={<ContentWrapper />} />
 
-				<Route path="api/Products/:id" element={<ProductDetail />} />
+				<Route path="/Products/:id" element={<ProductDetail />} />
 				<Route path="/Products" element={<Products />} />
 
 				<Route path="/movies" element={<ContentRowMovies />} />
-				<Route path="/last-movie" element={<LastMovieInDb />} />
+				<Route path="/last-product" element={<LastProductInDb />} />
 				<Route path="/search" element={<SearchMovies prueba="esta es una propiedad de prueba" />} />
 				<Route path="*" element={<h1>Not Found</h1>} />
 			</Routes>

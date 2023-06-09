@@ -10,7 +10,7 @@ function MovieList(props){
                 <td>{props.name}</td>
                 <td>{props.description}</td>
                 <td>{props.category}</td>
-                <td><Link to={props.detail}>Detail</Link></td>
+                <td><Link to={`/products/${props.id}`}>Detail</Link></td>
             </tr>
         </React.Fragment>
     )

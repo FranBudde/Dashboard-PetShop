@@ -11,21 +11,21 @@ function ContentRowMovies() {
     const [users, setUsers] = React.useState([])
     const [cards, setCards] = React.useState([
         {
-            title: 'Products in Data Base',
+            title: 'Total de productos',
             color: 'primary',
             quantity: 0,
             icon: 'fa-film',
             slug: 'products'
         },
         {
-            title: 'Categoria Products in Data Base',
+            title: 'Total de categorias',
             color: 'success',
             quantity: 0,
             icon: 'fa-award',
             slug: 'categories'
         },
         {
-            title: 'User in Data Base',
+            title: 'Total de usuarios',
             color: 'warning',
             quantity: 0,
             icon: 'fa-user',
@@ -39,18 +39,20 @@ function ContentRowMovies() {
             const usersResponse = await userService.get()
             setProducts(productsResponse.products)
             // Cambiar cuando se implemente servicio de usuarios
-            setUsers(usersResponse.products)
+            setUsers(usersResponse)
+
+            console.log(usersResponse.meta.count);
 
             setCards(values => {
                 return values.map(element => {
-                    let totalCategories = 0
-                    // Esto no se debe hacer el api debe devolver un array de objetos o un objeto pero cada key debeser la descripcion de la categoria
-                    Object.keys(productsResponse.countByCategory).forEach((key) => {
-                        totalCategories += productsResponse.countByCategory[key]
-                    })
+                    const totalCategories = productsResponse.countByCategory
+                    console.log(totalCategories);
+                    const lengthCategories = Object.keys(totalCategories).length;
+
+
                     element.quantity = element.slug === 'products' ? productsResponse.count : element.quantity
-                    element.quantity = element.slug === 'users' ? usersResponse.count : element.quantity
-                    element.quantity = element.slug === 'categories' ? totalCategories : element.quantity
+                    element.quantity = element.slug === 'users' ? usersResponse.meta.count : element.quantity
+                    element.quantity = element.slug === 'categories' ? lengthCategories : element.quantity
                     return element
                 })
             })
@@ -58,7 +60,6 @@ function ContentRowMovies() {
         getData()
     }, [])
 
-    console.log(getData());
 
     return (
         <div className="row">

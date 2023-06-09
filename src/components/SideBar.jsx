@@ -19,8 +19,7 @@ function SideBar() {
 			{/* <!-- Nav Item - Dashboard --> */}
 			<li className="nav-item active">
 				<Link className="nav-link" to="/">
-					<i className="fas fa-fw fa-tachometer-alt"></i>
-					<span>Dashboard - DH movies</span>
+					<span>Dashboard - Pet-Shop</span>
 				</Link>
 			</li>
 
@@ -48,7 +47,7 @@ function SideBar() {
 
 			{/* <!-- Nav Item - Tables --> */}
 			<li className="nav-item">
-				<Link className="nav-link" to="/last-movie">
+				<Link className="nav-link" to="/last-product">
 					<i className="fas fa-fw fa-table"></i>
 					<span>Ultimo Producto</span>
 				</Link>

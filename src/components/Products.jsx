@@ -12,16 +12,24 @@ class Products extends React.Component {
         products: []
     }
 
-    componentDidMount() {
-        fetch('http://localhost:3030/api/products')
-        .then(res => res.json())
-        .then(data => {
-            this.setState({ products: data.products })
-        })
-        .catch(err => {
+    async componentDidMount() {
+        const productsResponse = await productService.get()
+        const { products } = productsResponse
+        console.log(products);
+        try {
+            if (products) {
+                this.setState({ products })
+            } 
+
+        } catch (error) {
             console.log(err)
-        })
+        }
+
+
+
     }
+
+
 
     render() {
         return (
