@@ -3,11 +3,15 @@ import { Routes, Route } from 'react-router-dom'
 import Sidebar from './components/Sidebar'
 import ContentWrapper from './components/ContentWrapper'
 import ProductDetail from './components/ProductDetail'
-import ContentRowMovies from './components/ContentRowMovies'
+import ContentRowInfo from './components/ContentRowInfo'
 import LastProductInDb from './components/LastProductInDb'
 import SearchMovies from './components/SearchMovies'
 
+import Users from './components/User'
 import Products from './components/Products'
+import UserDetail from './components/UserDetail'
+
+
 
 import './App.css'
 
@@ -23,12 +27,19 @@ function App() {
 			<Routes>
 				<Route path="/" element={<ContentWrapper />} />
 
-				<Route path="/Products/:id" element={<ProductDetail />} />
-				<Route path="/Products" element={<Products />} />
+				<Route path="/product/:id" element={<ProductDetail />} />
 
-				<Route path="/movies" element={<ContentRowMovies />} />
+				<Route path="/products" element={<Products />} />
+
+				<Route path="/usuario/:id" element={<UserDetail />} />
+				<Route path="/usuarios" element={<Users />} />
+				
+				<Route path="/movies" element={<ContentRowInfo />} />
+
 				<Route path="/last-product" element={<LastProductInDb />} />
+
 				<Route path="/search" element={<SearchMovies prueba="esta es una propiedad de prueba" />} />
+				
 				<Route path="*" element={<h1>Not Found</h1>} />
 			</Routes>
 			{/* <!-- End of Content Wrapper --> */}

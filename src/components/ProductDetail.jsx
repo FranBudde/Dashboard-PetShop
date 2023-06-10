@@ -18,7 +18,6 @@ const ProductDetail = () => {
         const data = await productService.getById(id);
         setProduct(data);
     };
-    // console.log(product.mainImage);
 
     return(
         <div id="div-conteiner-detail">

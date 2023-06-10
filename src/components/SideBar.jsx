@@ -2,7 +2,9 @@ import React from 'react'
 
 import { Link } from 'react-router-dom'
 
+
 function SideBar() {
+
 	return (
 		<ul className="navbar-nav bg-gradient-secondary sidebar sidebar-dark accordion" id="accordionSidebar">
 
@@ -31,7 +33,7 @@ function SideBar() {
 
 			{/* <!-- Nav Item - Pages --> */}
 			<li className="nav-item">
-				<Link className="nav-link collapsed" to="/Products">
+				<Link className="nav-link collapsed" to="/products">
 					<i className="fas fa-fw fa-folder"></i>
 					<span>Productos</span>
 				</Link>
@@ -39,7 +41,7 @@ function SideBar() {
 
 			{/* <!-- Nav Item - Charts --> */}
 			<li className="nav-item">
-				<Link className="nav-link" to="/Usuarios">
+				<Link className="nav-link" to="/usuarios">
 					<i className="fas fa-fw fa-chart-area"></i>
 					<span>Usuarios</span>
 				</Link>
@@ -59,6 +61,9 @@ function SideBar() {
 					<span>Buscar</span>
 				</Link>
 			</li>
+
+			
+
 
 			{/* <!-- Divider --> */}
 			<hr className="sidebar-divider d-none d-md-block" />

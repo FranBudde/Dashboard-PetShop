@@ -12,17 +12,12 @@ function ContentRowMovies() {
             const productsResponse = await productService.get()
             
             const lastProduct =  productsResponse.products[productsResponse.products.length - 1]
-            console.log(productsResponse);
-            console.log(lastProduct);
             const productsDetailResponse = await productService.getById(lastProduct.id)
-            console.log(productsDetailResponse);
 
             setProducts(lastProduct)
 
             if (productsDetailResponse) {
-                console.log(productsDetailResponse.id);
                 setProductsDetail(productsDetailResponse)
-                console.log(productsDetailResponse);
               }
         }
         getData()

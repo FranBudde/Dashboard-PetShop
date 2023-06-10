@@ -41,12 +41,10 @@ function ContentRowMovies() {
             // Cambiar cuando se implemente servicio de usuarios
             setUsers(usersResponse)
 
-            console.log(usersResponse.meta.count);
 
             setCards(values => {
                 return values.map(element => {
                     const totalCategories = productsResponse.countByCategory
-                    console.log(totalCategories);
                     const lengthCategories = Object.keys(totalCategories).length;
 
 

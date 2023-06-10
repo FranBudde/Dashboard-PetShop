@@ -15,7 +15,6 @@ class Products extends React.Component {
     async componentDidMount() {
         const productsResponse = await productService.get()
         const { products } = productsResponse
-        console.log(products);
         try {
             if (products) {
                 this.setState({ products })

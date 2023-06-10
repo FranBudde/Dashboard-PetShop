@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 
-function MovieList(props){
+function ProductsList(props){
     return (
         <React.Fragment>
             <tr>
@@ -10,13 +10,13 @@ function MovieList(props){
                 <td>{props.name}</td>
                 <td>{props.description}</td>
                 <td>{props.category}</td>
-                <td><Link to={`/products/${props.id}`}>Detail</Link></td>
+                <td><Link to={`/product/${props.id}`}>Detail</Link></td>
             </tr>
         </React.Fragment>
     )
 }
 
-MovieList.propTypes = {
+ProductsList.propTypes = {
     id: PropTypes.number,
     name: PropTypes.string,
     description: PropTypes.string,
@@ -24,4 +24,4 @@ MovieList.propTypes = {
     detail: PropTypes.string
 }
 
-export default MovieList
+export default ProductsList
