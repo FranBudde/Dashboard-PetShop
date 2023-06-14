@@ -2,7 +2,7 @@ import React from 'react'
 
 import TopBar from './TopBar'
 import ContentRowTop from './ContentRowTop'
-import Products from './Products';
+import Products from './Products'
 import Footer from './Footer'
 
 function ContentWrapper() {
@@ -20,12 +20,14 @@ function ContentWrapper() {
 				<ContentRowTop />
 				{/* <!--End Content Row Top--> */}
 				<Products />
+
 			</div>
 			{/* <!-- End of MainContent --> */}
 
 			{/* <!-- Footer --> */}
 			<Footer />
 			{/* <!-- End of Footer --> */}
+
 
 		</div>
     )

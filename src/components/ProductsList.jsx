@@ -10,7 +10,7 @@ function ProductsList(props){
                 <td>{props.name}</td>
                 <td>{props.description}</td>
                 <td>{props.category}</td>
-                <td><Link to={`/product/${props.id}`}>Detail</Link></td>
+                <td><Link to={`/product/${props.id}`} className='links'>Ver</Link></td>
             </tr>
         </React.Fragment>
     )

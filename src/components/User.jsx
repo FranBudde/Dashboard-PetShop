@@ -26,26 +26,34 @@ class Users extends React.Component {
 
     render() {
         return (
-            <div>
-                <h1 id="title_view_users">Listado de Usuarios existentes</h1>
+            <div style={{ 'padding': '10px' }}>
+                {/*<!-- MOVIES LIST -->*/}
+                <h1 className="h3 mb-2 text-gray-800 ">Usuarios Existentes</h1>
 
-                <table className="table table-bordered" id="dataTable" width="100%" cellSpacing="0">
-                    <thead>
-                        <tr>
-                            <th>Nombre</th>
-                            <th>Apellido</th>
-                            <th>Email</th>
-                            <th>Ver usuario</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {
-                            this.state.users.map((user, index) => {
-                                return <UserList  {...user} key={index} />
-                            })
-                        }
-                    </tbody>
-                </table>
+                {/*<!-- DataTales Example -->*/}
+                <div className="card shadow mb-4">
+                    <div className="card-body">
+                        <div className="table-responsive">
+                            <table className="table table-bordered table-user" id="dataTable" width="100%" cellSpacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>Nombre</th>
+                                        <th>Apellido</th>
+                                        <th>Email</th>
+                                        <th>Ver usuario</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {
+                                        this.state.users.map((user, index) => {
+                                            return <UserList  {...user} key={index} />
+                                        })
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
             </div>
         )
     }
@@ -54,3 +62,6 @@ class Users extends React.Component {
 
 
 export default React.memo(Users)
+
+
+

@@ -21,16 +21,20 @@ const UserDetail = () => {
     };
 
     return(
-        <div id="div-conteiner-detail">
-            <ul id="container-detail">
-                <li id="titulo">{user.first_name}</li>
-                <div id="container-info-product">
-                    <li id="description">{user.last_name}</li>
-                    <li id="category">{user.email}</li>
+        <div className="col-lg-6 mb-4">
+            <div className="card shadow mb-4">
+                <div className="card-header py-3">
+                    <h5 className="m-0 font-weight-bold text-gray-800">Usuario: {user.first_name}</h5>
                 </div>
-            </ul>
+                <div className="card-body">
+                    <p>Nombre: {user.first_name}</p>
+                    <p>Apellido: {user.last_name}</p>
+                    <p>Email: {user.email}</p>
+                </div>
+            </div>
         </div>
-    );
+    )
+    
 }
 
 export default UserDetail

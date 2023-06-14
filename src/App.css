@@ -1,0 +1,25 @@
+@media (min-width:320px){
+    #accordionSidebar {
+        display: none;
+      }
+      
+      #accordionSidebar.mostrar {
+        display: block;
+      }
+      
+  }
+
+
+@media (min-width:768px){
+
+  }
+
+@media (min-width:1024px){
+    #accordionSidebar{
+        display: block;
+    }
+
+    #boton-menuHamburguesa {
+        display: none;
+    }
+  }

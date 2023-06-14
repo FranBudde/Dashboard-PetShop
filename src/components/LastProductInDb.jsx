@@ -38,7 +38,7 @@ function ContentRowMovies() {
                     <p>Precio: ${detailLastProduct.price}</p>
                     <p>Para: {detailLastProduct.pet}</p>
                     {/* <a className="btn btn-danger" target="_blank" rel="nofollow" href="/">View product detail</a> */}
-                    <Link className="btn btn-danger"  rel="nofollow" to={`/products/${detailLastProduct.id}`}>Detail</Link>
+                    <Link className="btn btn-danger"  rel="nofollow" to={`/product/${detailLastProduct.id}`}>Detail</Link>
 
                 </div>
             </div>

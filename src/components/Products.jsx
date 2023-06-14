@@ -32,9 +32,9 @@ class Products extends React.Component {
 
     render() {
         return (
-            <>
+            <div style={{'padding': '10px'}}>
                 {/*<!-- MOVIES LIST -->*/}
-                <h1 className="h3 mb-2 text-gray-800 ">All the products in the Database</h1>
+                <h1 className="h3 mb-2 text-gray-800 ">Productos Existentes</h1>
 
                 {/*<!-- DataTales Example -->*/}
                 <div className="card shadow mb-4">
@@ -61,7 +61,7 @@ class Products extends React.Component {
                         </div>
                     </div>
                 </div>
-            </>
+            </div>
         )
     }
 }
