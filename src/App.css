@@ -1,25 +1,46 @@
+.navbar-nav{
+  position: fixed;
+}
+
+
 @media (min-width:320px){
     #accordionSidebar {
-        display: none;
-      }
-      
-      #accordionSidebar.mostrar {
         display: block;
       }
       
+      #accordionSidebar.mostrar {
+        display: none;
+      }
+
+      .margin-left-navbar{
+        margin-left: 6.5rem!important;
+      }
+
   }
 
 
 @media (min-width:768px){
+  .margin-left-navbar{
+    margin-left: 14rem!important;
+  }
+  .col-md-3 {
+    flex: 0 0 50%!important;
+    max-width: 50%!important;
+}
+
 
   }
 
 @media (min-width:1024px){
     #accordionSidebar{
-        display: block;
+      display: block;
     }
 
     #boton-menuHamburguesa {
-        display: none;
+      display: none;
     }
+    .col-md-3 {
+      flex: 0 0 30%!important;
+      max-width: 30%!important;
+  }
   }

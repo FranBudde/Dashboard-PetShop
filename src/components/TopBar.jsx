@@ -8,7 +8,7 @@ function TopBar() {
                 <i className="fa fa-bars"></i>
             </button> */}
 
-            <button id='boton-menuHamburguesa'>
+            <button id='boton-menuHamburguesa' className='custom-button'>
                 <i>tocar</i>
             </button>
         </nav>

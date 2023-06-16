@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 function ProductsList(props){
     return (
         <React.Fragment>
-            <tr>
+            <tr className='highlight-row'>
                 <td>{props.id}</td>
                 <td>{props.name}</td>
                 <td>{props.description}</td>

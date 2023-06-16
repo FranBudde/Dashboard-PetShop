@@ -34,7 +34,7 @@ class Users extends React.Component {
                 <div className="card shadow mb-4">
                     <div className="card-body">
                         <div className="table-responsive">
-                            <table className="table table-bordered table-user" id="dataTable" width="100%" cellSpacing="0">
+                            <table className="table table-bordered table-user" id="dataTable" width="100%" cellSpacing="0" style={{'overflowX': 'auto'}}>
                                 <thead>
                                     <tr>
                                         <th>Nombre</th>

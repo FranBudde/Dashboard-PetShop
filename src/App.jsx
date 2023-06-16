@@ -10,7 +10,8 @@ import SearchMovies from './components/SearchMovies'
 import Users from './components/User'
 import Products from './components/Products'
 import UserDetail from './components/UserDetail'
-// import Footer from './components/Footer'
+
+import TopBar from './components/TopBar'
 
 
 
@@ -18,12 +19,17 @@ import './App.css'
 
 function App() {
 	return (
+		
 		<div id="wrapper">
-
 			{/* <!-- Sidebar --> */}
+
 			<Sidebar />
+			
 			{/* <!-- End of Sidebar --> */}
 			{/* <!-- Content Wrapper --> */}
+			<div id="content-wrapper" className="d-flex flex-column margin-left-navbar">
+			<TopBar/>
+
 			<Routes>
 				<Route path="/" element={<ContentWrapper />} />
 
@@ -43,7 +49,7 @@ function App() {
 				<Route path="*" element={<h1>Not Found</h1>} />
 			</Routes>
 			{/* <!-- End of Content Wrapper --> */}
-		
+			</div>
 		</div>
 	)
 }

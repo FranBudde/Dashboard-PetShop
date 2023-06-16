@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 function UserList(props){
     return (
         <React.Fragment>
-            <tr>
+            <tr className='highlight-row'>
                 <td>{props.first_name}</td>
                 <td>{props.last_name}</td>
                 <td>{props.email}</td>
